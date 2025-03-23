@@ -1,0 +1,40 @@
+[project]
+name = "agentic-market-predictor"
+version = "0.1.0"
+description = "Prediciting markets with news agents and market participant agents"
+authors = [
+    {name = "Adam Honnywill"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ruff (>=0.11.2,<0.12.0)"
+]
+
+[tool.poetry]
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.11.2"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.ruff]
+extend-exclude = [".venv/**"]
+lint.select = ["ALL"]
+lint.ignore = [
+    "D1",     # undocumented-### (makes docstrings compulsory)
+    "D203",   # one-blank-line-before-class (choose between this and D211)
+    "D213",   # multi-line-summary-second-line (choose between this and D212)
+    "COM812", # missing-trailing-comma
+    "FIX",    # flake8-fixme
+    "T201",
+    "E501",
+    "TD003",
+    "S311", # enables random
+    "FBT001",
+    "DTZ005"
+]
+
