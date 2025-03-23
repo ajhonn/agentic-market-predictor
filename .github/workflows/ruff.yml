@@ -1,10 +1,6 @@
 name: Lint and Format with Ruff
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+on: [push, pull_request]
 
 jobs:
   lint:
@@ -15,7 +11,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.11"  # or your preferred version
+          python-version: "3.12"
 
       - name: Install dependencies
         run: |
